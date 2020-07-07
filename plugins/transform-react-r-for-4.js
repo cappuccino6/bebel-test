@@ -1,5 +1,5 @@
 const { declare } = require("@babel/helper-plugin-utils");
-const t = require('@babel/types');
+const { types: t } = require('@babel/core');
 const _ = require('lodash');
 
 module.exports = declare((api, options) => {
@@ -112,7 +112,6 @@ module.exports = declare((api, options) => {
             _nodes.push(_node_n);
           }
 
-
           // 从节点数据到节点字符串
           function parseNodeToString(node) {
             let { openingElement, openingElement: {attributes}, children } = node;
@@ -122,7 +121,7 @@ module.exports = declare((api, options) => {
               attrString += `${name.name.replace('className', 'class')}="${value.value}" `
             })
             const eleName = openingElement.name.name;
-            return `<${eleName} ${attrString.trim()}>${children[0].value}</${eleName}>`
+            return `<${eleName} ${attrString.trim()}>${children[0] ? children[0].value : ''}</${eleName}>`
           }
 
           const finalELements = _nodes.map(item => parseNodeToString(item)).join('')

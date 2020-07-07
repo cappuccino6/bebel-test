@@ -3,9 +3,9 @@ import React from 'react';
 const App = () => {
   const arr1 = ['这', '里', '是', '瓜', '瓜', '龙'];
 
-  // const arr2 = [{id: 'aaaaa'}, {id: 'bbbbb'}, {id: 'ccccc'}];
+  const arr2 = [{id: 'aaaaa'}, {id: 'bbbbb'}, {id: 'ccccc'}];
 
-  // const arr3 = [{info: {id: '这里是'}}, {info: {id: '瓜瓜龙'}}];
+  const arr3 = [{info: {id: '这里是'}}, {info: {id: '瓜瓜龙'}}];
 
   return (
     <div className="root">

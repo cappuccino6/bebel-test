@@ -1,5 +1,5 @@
 const { declare } = require("@babel/helper-plugin-utils");
-const t = require('@babel/types');
+const { types: t } = require('@babel/core');
 const _ = require('lodash');
 
 module.exports = declare((api, options) => {
