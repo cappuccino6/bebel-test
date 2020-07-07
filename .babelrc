@@ -1,0 +1,21 @@
+{
+  "env": {
+    "cjs": {
+      "presets": [
+        ["@babel/preset-env", {"modules": "commonjs"}],
+        "@babel/react"
+      ]
+    },
+    "esm": {
+      "presets": [
+        "@babel/react"
+      ]
+    }
+  },
+  "plugins": [
+    // ["./plugins/transform-react-r-for-1.js"]
+    // ["./plugins/transform-react-r-for-2.js"]
+    // ["./plugins/transform-react-r-for-3.js"]
+    ["./plugins/transform-react-r-for-4.js"]
+  ]
+}
